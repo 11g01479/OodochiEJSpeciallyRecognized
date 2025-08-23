@@ -121,7 +121,7 @@
                     <p class="text-7xl font-bold my-4" style="color: #118AB2;">実質 <span class="text-9xl">0</span> 円</p>
                 </div>
                 <div class="w-1/2 h-full">
-                    <img src="大栃中学校：校門前：４人生徒：笑顔.jpg" alt="豊かな自然に囲まれた学校のイメージ" class="rounded-lg shadow-md w-full h-full object-cover">
+                    <img src="https://11g01479.github.io/OodochiEJSpeciallyRecognized/%E5%A4%A7%E6%A0%83%E4%B8%AD%E5%AD%A6%E6%A0%A1%EF%BC%9A%E6%A0%A1%E9%96%80%E5%89%8D%EF%BC%9A%EF%BC%94%E4%BA%BA%E7%94%9F%E5%BE%92%EF%BC%9A%E7%AC%91%E9%A1%94.jpg" alt="笑顔で迎える大栃小・中学校の生徒たち" class="rounded-lg shadow-md w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -157,10 +157,9 @@
         <div class="slide">
             <h2 class="text-4xl font-bold mb-8 w-full text-center" style="color: #073B4C;">日本トップクラスの自然と地域が教室</h2>
             <div class="flex w-full h-full items-center gap-8">
-                <div class="w-1/2 h-full flex justify-center items-center">
-                    <div class="relative w-full h-full max-h-[400px]">
-                        <canvas id="learningMixChart"></canvas>
-                    </div>
+                <div class="w-1/2 h-full flex flex-col gap-4">
+                     <img src="https://raw.githubusercontent.com/11g01479/OodochiEJSpeciallyRecognized/main/%E5%A5%A5%E7%89%A9%E9%83%A8%E6%B9%96%E6%B9%96%E6%B0%B4%E7%A5%AD%EF%BC%9A%E3%82%AB%E3%83%A9%E3%83%BC.jpg" alt="奥物部湖湖水祭の様子" class="rounded-lg shadow-md w-full h-1/2 object-cover">
+                     <img src="https://raw.githubusercontent.com/11g01479/OodochiEJSpeciallyRecognized/main/%E6%B9%96%E6%B0%B4%E7%A5%AD%E3%82%8A%E3%81%AE%E7%81%AF%E3%82%8D%E3%81%86%E3%81%A5%E3%81%8F%E3%82%8A%EF%BC%9A%E3%82%AB%E3%83%A9%E3%83%BC.jpg" alt="湖水祭りの灯ろうづくりの様子" class="rounded-lg shadow-md w-full h-1/2 object-cover">
                 </div>
                 <div class="w-1/2">
                     <h3 class="text-2xl font-bold mb-4" style="color: #073B4C;">多様な体験活動のバランス</h3>
@@ -208,12 +207,12 @@
                     <h3 class="text-xl font-bold" style="color: #073B4C;">自慢のおいしい給食</h3>
                  </div>
                  <div class="bg-white rounded-lg shadow-md p-4 text-center flex flex-col">
-                    <img src="https://placehold.co/400x300/118AB2/FFFFFF?text=新制服" alt="新しくなった中学校の制服のイメージ" class="rounded-lg mb-4 w-full h-48 object-cover flex-grow">
-                    <h3 class="text-xl font-bold" style="color: #073B4C;">新しい中学校の制服</h3>
+                    <img src="https://raw.githubusercontent.com/11g01479/OodochiEJSpeciallyRecognized/main/%E6%B5%81%E3%81%97%E3%81%9D%E3%81%86%E3%82%81%E3%82%93%EF%BC%9A%E3%82%AB%E3%83%A9%E3%83%BC.jpg" alt="流しそうめんのイベント" class="rounded-lg mb-4 w-full h-48 object-cover flex-grow">
+                    <h3 class="text-xl font-bold" style="color: #073B4C;">楽しいイベント</h3>
                  </div>
                  <div class="bg-white rounded-lg shadow-md p-4 text-center flex flex-col">
-                    <img src="https://placehold.co/400x300/06D6A0/FFFFFF?text=合同行事" alt="小中合同行事のイメージ" class="rounded-lg mb-4 w-full h-48 object-cover flex-grow">
-                    <h3 class="text-xl font-bold" style="color: #073B4C;">楽しい小中合同行事</h3>
+                    <img src="https://raw.githubusercontent.com/11g01479/OodochiEJSpeciallyRecognized/main/%E4%BD%93%E8%82%B2%E9%A4%A8%E3%81%AE%E3%83%9C%E3%83%AB%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%EF%BC%9A%E3%82%AB%E3%83%A9%E3%83%BC.jpg" alt="体育館でのボルダリングの様子" class="rounded-lg mb-4 w-full h-48 object-cover flex-grow">
+                    <h3 class="text-xl font-bold" style="color: #073B4C;">楽しい体育活動</h3>
                  </div>
             </div>
         </div>
@@ -399,31 +398,6 @@
                 const answer = await callGeminiApi(prompt);
                 loader.classList.add('hidden');
                 storyTextElem.textContent = answer;
-            });
-
-            const ctx = document.getElementById('learningMixChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['自然体験', '地域交流', '学校での学び'],
-                    datasets: [{ data: [40, 35, 25], backgroundColor: ['#06D6A0', '#FFD166', '#118AB2'], borderColor: '#F8F9FA', borderWidth: 6, hoverOffset: 8 }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '60%',
-                    plugins: {
-                        legend: { position: 'bottom', labels: { padding: 20, font: { size: 16 } } },
-                        tooltip: {
-                            callbacks: {
-                                title: (tooltipItems) => {
-                                    let label = tooltipItems[0].chart.data.labels[tooltipItems[0].dataIndex];
-                                    return Array.isArray(label) ? label.join(' ') : label;
-                                }
-                            }
-                        }
-                    }
-                }
             });
         });
     </script>
